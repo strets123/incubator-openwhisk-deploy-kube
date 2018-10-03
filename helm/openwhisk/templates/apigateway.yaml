@@ -10,6 +10,8 @@ metadata:
   labels:
     name: {{ .Values.apigw.name | quote }}
 spec:
+  type:
+    NodePort
   selector:
     name: {{ .Values.apigw.name | quote }}
   ports:

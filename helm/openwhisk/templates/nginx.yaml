@@ -9,9 +9,7 @@ metadata:
   labels:
     name: {{ .Values.nginx.name | quote }}
 spec:
-  {{- if .Values.nginx.httpsNodePort }}
   type: NodePort
-  {{- end }}
   selector:
     name: {{ .Values.nginx.name | quote }}
   ports:
